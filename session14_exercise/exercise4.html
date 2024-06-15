@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="change-text">This text is optional</div>
+    <button id="change-btn">Press to say hide text</button>
+
+    <script>
+        document.querySelector("#change-btn").addEventListener("click", () => {
+            let textElement = document.querySelector("#change-text");
+            textElement.style.color = `red`;
+            textElement.style.backgroundColor = `yellow`;
+            textElement.style.width = `150px`;
+            textElement.style.padding = `3px`;
+
+
+        });
+    </script>
+</body>
+
+</html>

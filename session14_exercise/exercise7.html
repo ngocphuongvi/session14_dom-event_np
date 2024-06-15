@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table id="myTable" style="border: 1px, solid, black">
+        <td style="border: 1px, solid, black">Cell 1 row 1</td>
+        <td style="border: 1px, solid, black">Cell 2 row 1</td>
+        <td style="border: 1px, solid, black">Cell 3 row 1</td>
+    </table>
+    <button id="btn"
+        style="background-color: rgb(81, 209, 81);padding: 5px 15px;border-radius: 10px;border: none; margin-top: 10px;">add
+        row</button>
+    <script>
+        document.querySelector("#btn").addEventListener("click", function () {
+            let table = document.querySelector("#myTable");
+            let newRow = table.insertRow();
+            for (let i = 0; i < 3; i++) {
+                let newCell = newRow.insertCell();
+
+                newCell.textContent = `Cell ${i + 1} Row n `;
+                newCell.style.border = `1px, solid, black`;
+            }
+
+        });
+
+
+    </script>
+</body>
+
+</html>
